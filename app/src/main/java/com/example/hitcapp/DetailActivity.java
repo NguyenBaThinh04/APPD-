@@ -10,6 +10,7 @@ public class DetailActivity extends AppCompatActivity {
     TextView txtName, txtPrice, txtDesc;
     ImageView imgProduct;
     Button btnAdd;
+    ImageButton btnBack; // 👈 sửa lại
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,10 @@ public class DetailActivity extends AppCompatActivity {
         txtDesc = findViewById(R.id.txtDesc);
         imgProduct = findViewById(R.id.imgProduct);
         btnAdd = findViewById(R.id.btnAdd);
+
+        btnBack = findViewById(R.id.btnBack);
+
+        btnBack.setOnClickListener(v -> finish());
 
         // ================= CHECK INTENT =================
         if (getIntent() == null) {
@@ -37,9 +42,7 @@ public class DetailActivity extends AppCompatActivity {
 
         // ================= SAFE DISPLAY =================
         txtName.setText(name != null ? name : "Không có tên sản phẩm");
-
         txtPrice.setText(String.format("%,d VND", price));
-
         txtDesc.setText(desc != null ? desc : "Không có mô tả");
 
         if (image != 0) {
@@ -50,7 +53,6 @@ public class DetailActivity extends AppCompatActivity {
 
         // ================= ADD TO CART =================
         btnAdd.setOnClickListener(v -> {
-
             String finalName = name != null ? name : "";
             String finalDesc = desc != null ? desc : "";
 

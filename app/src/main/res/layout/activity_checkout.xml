@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- TITLE -->
+        <TextView
+            android:text="Thanh Toán"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- DANH SÁCH GIỎ HÀNG -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#FFFFFF"
+            android:padding="8dp"/>
+
+        <!-- TỔNG TIỀN -->
+        <TextView
+            android:id="@+id/txtTotal"
+            android:text="Tổng tiền: 0 VND"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#673AB7"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- NHẬP TÊN -->
+        <EditText
+            android:id="@+id/edtName"
+            android:hint="Họ tên"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"/>
+
+        <!-- SĐT -->
+        <EditText
+            android:id="@+id/edtPhone"
+            android:hint="Số điện thoại"
+            android:inputType="phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- ĐỊA CHỈ -->
+        <EditText
+            android:id="@+id/edtAddress"
+            android:hint="Địa chỉ giao hàng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- BUTTON THANH TOÁN -->
+        <Button
+            android:id="@+id/btnPay"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Thanh toán"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#673AB7"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
