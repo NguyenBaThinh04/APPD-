@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:background="@drawable/bg_item">
+
+    <ImageView
+        android:id="@+id/imgProduct"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        android:background="#FFFFFF"/>
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="#FF5722"/>
+
+    <TextView
+        android:id="@+id/txtDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#666"/>
+
+    <Button
+        android:id="@+id/btnAddCart"
+        android:text="Thêm"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:textSize="12sp"
+        android:layout_marginTop="4dp"/>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:text="Xóa"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:textSize="12sp"
+        android:backgroundTint="#FF4444"
+        android:textColor="#FFFFFF"/>
+</LinearLayout>
